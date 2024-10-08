@@ -56,7 +56,7 @@ tb_grid_search_detalle <- data.table(semilla = integer(), cp = numeric(), maxdep
 # Primera pasada (búsqueda general)
 for (vmin_split in seq(minsplit_min, minsplit_min + 20, by=10)) {
   for (vmax_depth in seq(4, 12, by=2)) {
-    for (v_cp in seq(-0.9, -0.1, by=0.2)) {
+    for (v_cp in seq(-1, 0, by=0.2)) {
       for (v_minbucket in seq(3, minbucket_limit, by=2)) {
         if (v_minbucket < (vmin_split / 2)) {
           param_basicos <- list("cp" = v_cp, "maxdepth" = vmax_depth, "minsplit" = vmin_split, "minbucket" = v_minbucket)
